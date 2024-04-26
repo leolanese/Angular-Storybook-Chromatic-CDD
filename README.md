@@ -68,14 +68,14 @@ yarn chromatic
 
 ![Verify UI changes](./src/app/assets/VerifyUIChanges.png)
 
-## Consultation with the Team + Resolving and mergin
+- Consultation with the Team + Resolving and mergin!
 
 
 ## Publish Storybook with CI/CD Setup
 
 > We will add Chromatic to out Ci/CD pipeline to automaticly publish Storybook when push
 
-### Add Chromatic to your CI/CD pipeline
+## Add Chromatic to your CI/CD pipeline
 
 ```js
 //  Add a chromatic script to your package.json and replace it with
@@ -84,9 +84,10 @@ yarn chromatic
 }
 ```
 
-## ## GitHub Action for Chromatic. Workflow setup
+## GitHub Action for Chromatic. Workflow setup
 
 ```js
+// .github/workflow/chromatic.yml
 name: 'Chromatic'
 on: push
 
@@ -102,15 +103,19 @@ jobs:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
 ```
 
-In your .github/workflows directory, create a new file called chromatic.yml and add the following:
-https://www.chromatic.com/docs/github-actions/
+## Project token secret  in our repo
 
-## Project token secret
 To securely provide the projectToken to Chromatic, you must configure a GitHub repository secret. First, find your project on Chromatic.com and go to Manage and then Configure.
 
+CHROMATIC_PROJECT_TOKEN + Project Token (provied by Chromatic)
 
-> Further information: https://www.chromatic.com/docs/github-actions/
+LINK:
+https://github.com/leolanese/Angular-Storybook-Chromatic-CDD/settings/secrets/actions
 
+![Repository Secrets](./src/app/assets/RepositorySecrets.png)
+
+### LINKS
+https://www.chromatic.com/docs/github-actions/
 
 ---
 
