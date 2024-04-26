@@ -117,6 +117,13 @@ https://github.com/leolanese/Angular-Storybook-Chromatic-CDD/settings/secrets/ac
 ### LINKS
 https://www.chromatic.com/docs/github-actions/
 
+
+> We should see the Action running in GitHub
+
+## Chromatic `Reviews`
+
+> Click on left side bar `Reviews` on Chromatic, and then Install Chromatic on GitHub`
+
 ---
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.3.
