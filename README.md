@@ -1,5 +1,27 @@
 # AngularStorybookChromaticCDD
 
+```js
+// create new angular project
+ng new Angular-Storybook-Chromatic-CDD
+
+// Initialize Storybook in your project
+npx sb init
+```
+
+## Up to this point, we should have: 
+
+- Angular App running:
+localhost:4200
+
+- StoryBook running:
+localhost:6006
+
+- Chromatic running:
+https://www.chromatic.com/start
+
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.3.
 
 ## Development server
