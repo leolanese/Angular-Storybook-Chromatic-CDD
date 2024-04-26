@@ -8,7 +8,7 @@ ng new Angular-Storybook-Chromatic-CDD
 npx sb init
 ```
 
-## Up to this point, we should have: 
+## Up to this point, we should have
 
 - Angular App running:
 localhost:4200
@@ -19,7 +19,37 @@ localhost:6006
 - Chromatic running:
 https://www.chromatic.com/start
 
+- Setup a new project in a Repo (I used gitHub)
+Then `Choose your Project` from Chromatic and select the repo:
+https://github.com/leolanese/Angular-Storybook-Chromatic-CDD
 
+## Publish Angular-Storybook-Chromatic-CDD’s Storybook
+
+```js
+// Get the Chromatic package
+npm install --save-dev chromatic
+
+// Publish your Storybook (using your token provied by Chromatic)
+npx chromatic --project-token=chpt_XXXXXXXXXXXXXXXXX
+
+// No 'chromatic' script found in your package.json
+// selection 'Y' to add in the package.json
+// "chromatic": "npx chromatic --project-token=chpt_XXXXXXXXXXXXXXXXX"
+```
+
+## Back to chromatic.com
+Now,  you should see a new published Storybook
+
+## Getting into Action!
+Now Click: `Catch a UI change` to Spot UI changes
+
+```js
+//  src/stories/Header.components
+
+git add --all ; git commit -m 'Modified Header for testing' ; git push
+```
+
+---
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.3.
