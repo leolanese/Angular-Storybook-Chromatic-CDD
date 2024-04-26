@@ -120,9 +120,13 @@ https://www.chromatic.com/docs/github-actions/
 
 > We should see the Action running in GitHub
 
-## Chromatic `Reviews`
+## Chromatic `Reviews` (Approving) Step in CI/CD
 
-> Click on left side bar `Reviews` on Chromatic, and then Install Chromatic on GitHub`
+> Click on left side bar `Reviews` on Chromatic, and then Install Chromatic on GitHub` then click Create review` this will add a new step in the Ci/CD pipeline, assign reviewers, etc.
+
+> These needs to work with branching strategy
+
+![reviewing](./src/app/assets/Reviewing.png)
 
 ---
 
