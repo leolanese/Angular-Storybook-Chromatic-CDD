@@ -107,18 +107,20 @@ jobs:
 
 To securely provide the projectToken to Chromatic, you must configure a GitHub repository secret. First, find your project on Chromatic.com and go to Manage and then Configure.
 
+```js
 CHROMATIC_PROJECT_TOKEN + Project Token (provied by Chromatic)
+```
 
-LINK:
+- LINK:
 https://github.com/leolanese/Angular-Storybook-Chromatic-CDD/settings/secrets/actions
 
 ![Repository Secrets](./src/app/assets/RepositorySecrets.png)
 
-### LINKS
+- LINKS
 https://www.chromatic.com/docs/github-actions/
 
 
-> We should see the Action running in GitHub
+> Now, we should see the Action running in GitHub!
 
 ## Chromatic `Reviews` (Approving) Step in CI/CD
 
