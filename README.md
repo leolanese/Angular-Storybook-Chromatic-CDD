@@ -1,9 +1,9 @@
-# Angular Storybook Chromatic - CDD
+# Angular 17+, Storybook and Chromatic - CDD
 
 > Chromatic is a Visual Regression Test Suit: It can be used to test UI changes in Storybook.
  take snapshots before and after pushing, and make a comparison automaticly
 
-> It lets them visually tests stories automatically and publish their Storybook for others to reference. QA can often feel like the world’s longest game of "spot the difference"
+> It lets them visually tests stories automatically and publish their Storybook for others to reference. QA can often feel like the world's longest game of "spot the difference"
 
 ## SETUP
 
@@ -46,7 +46,6 @@ npx chromatic --project-token=chpt_XXXXXXXXXXXXXXXXX
 // "chromatic": "npx chromatic --project-token=chpt_XXXXXXXXXXXXXXXXX"
 ```
 
-
 ## Back to chromatic.com
 Now,  you should see a new published Storybook
 
@@ -69,10 +68,51 @@ yarn chromatic
 
 ![Verify UI changes](./src/app/assets/VerifyUIChanges.png)
 
-## Consultation with the Team + Resolving
+## Consultation with the Team + Resolving and mergin
+
+
+## Publish Storybook with CI/CD Setup
+
+> We will add Chromatic to out Ci/CD pipeline to automaticly publish Storybook when push
+
+### Add Chromatic to your CI/CD pipeline
+
+```js
+//  Add a chromatic script to your package.json and replace it with
+"scripts": {
+  "chromatic": "chromatic --project-token CHROMATIC_PROJECT_TOKEN --exit-zero-on-changes"
+}
+```
+
+## ## GitHub Action for Chromatic. Workflow setup
+
+```js
+name: 'Chromatic'
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - run: yarn
+      - uses: chromaui/action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+```
+
+In your .github/workflows directory, create a new file called chromatic.yml and add the following:
+https://www.chromatic.com/docs/github-actions/
+
+## Project token secret
+To securely provide the projectToken to Chromatic, you must configure a GitHub repository secret. First, find your project on Chromatic.com and go to Manage and then Configure.
+
+
+> Further information: https://www.chromatic.com/docs/github-actions/
+
 
 ---
-
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.3.
 
