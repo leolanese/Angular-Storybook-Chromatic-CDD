@@ -1,4 +1,11 @@
-# AngularStorybookChromaticCDD
+# Angular Storybook Chromatic - CDD
+
+> Chromatic is a Visual Regression Test Suit: It can be used to test UI changes in Storybook.
+ take snapshots before and after pushing, and make a comparison automaticly
+
+> It lets them visually tests stories automatically and publish their Storybook for others to reference. QA can often feel like the world’s longest game of "spot the difference"
+
+## SETUP
 
 ```js
 // create new angular project
@@ -16,6 +23,8 @@ localhost:4200
 - StoryBook running:
 localhost:6006
 
+![Angular and Storbook Deployed](./src/app/assets/AngularAndStorybookDeployed.png)
+
 - Chromatic running:
 https://www.chromatic.com/start
 
@@ -23,7 +32,7 @@ https://www.chromatic.com/start
 Then `Choose your Project` from Chromatic and select the repo:
 https://github.com/leolanese/Angular-Storybook-Chromatic-CDD
 
-## Publish Angular-Storybook-Chromatic-CDD’s Storybook
+## Publish Angular-Storybook-Chromatic-CDD's Storybook (Before screenshot)
 
 ```js
 // Get the Chromatic package
@@ -37,17 +46,30 @@ npx chromatic --project-token=chpt_XXXXXXXXXXXXXXXXX
 // "chromatic": "npx chromatic --project-token=chpt_XXXXXXXXXXXXXXXXX"
 ```
 
+
 ## Back to chromatic.com
 Now,  you should see a new published Storybook
 
-## Getting into Action!
+## Getting into Action! (After screenshot)
 Now Click: `Catch a UI change` to Spot UI changes
 
 ```js
 //  src/stories/Header.components
+Let's make a simply change: `Welcome` with `TEST`
 
-git add --all ; git commit -m 'Modified Header for testing' ; git push
+git add --all; git commit -m 'Modified Header for testing'; git push
+
+// Run the test publish command again to upload your UI tweaks and have Chromatic catch your changes
+yarn chromatic
 ```
+
+![Chromatic change reported](./src/app/assets/componentChanged.png)
+
+## Verify UI change
+
+![Verify UI changes](./src/app/assets/VerifyUIChanges.png)
+
+## Consultation with the Team + Resolving
 
 ---
 
