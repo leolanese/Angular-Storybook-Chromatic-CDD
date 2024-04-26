@@ -124,11 +124,18 @@ https://www.chromatic.com/docs/github-actions/
 
 ## Chromatic `Reviews` (Approving) Step in CI/CD
 
-> Click on left side bar `Reviews` on Chromatic, and then Install Chromatic on GitHub` then click Create review` this will add a new step in the Ci/CD pipeline, assign reviewers, etc.
+> Click on left side bar `Reviews` on Chromatic, and then Install Chromatic on GitHub` then click Create review` this will add a new step in the Ci/CD pipeline, assign reviewers, etc. Now, chromatic will handle the PR process
 
 > These needs to work with branching strategy
 
 ![reviewing](./src/app/assets/Reviewing.png)
+
+## Sharing
+
+Now, lets share the UI with the team! (This helps your team review components online, see past versions, and get feedback on work in progress) using Chromatic
+
+- LINK
+https://www.chromatic.com/library?appId=662b7879acac0fd117443368
 
 ---
 
